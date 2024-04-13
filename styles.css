@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #023e8a;
+  --primary-color-dark: #289cbf;
+  --text-dark: #464646;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.nav__logo {
+  font-weight: bold; /* This makes the logo text bold */
+}
+
+.nav__links a {
+  font-weight: bold; /* This makes all the link text in the navigation bold */
+}
+
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  text-decoration: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+.header {
+  padding: 0 1rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.content h1 span {
+  font-weight: 400;
+}
+
+.content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  line-height: 1.75rem;
+}
+
+.image {
+  position: relative;
+  text-align: center;
+  isolation: isolate;
+}
+
+.image__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 450px;
+  width: 450px;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.image img {
+  width: 100%;
+  max-width: 475px;
+}
+
+.image__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image__content__1 {
+  transform: translate(calc(-50% - 12rem), calc(-50% - 8rem));
+}
+
+.image__content__1 span {
+  padding: 10px 12px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: #defcf4;
+  border-radius: 100%;
+}
+
+.image__content__1 h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.image__content__1 p {
+  color: var(--text-light);
+}
+
+.image__content__2 {
+  transform: translate(calc(-50% + 8rem), calc(-50% + 10rem));
+}
+
+.image__content__2 ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.image__content__2 li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: var(--text-light);
+}
+
+.image__content__2 span {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+@media (width < 900px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header {
+    padding: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.nav__links, .nav__logo {
+  display: flex;
+  list-style: none;
+}
+
+.nav__links li {
+  padding: 10px;
+}
+
+.header .content {
+  margin-bottom: 20px;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.text-content {
+  flex: 1 1 60%; /* Adjusts to 60% of the container width */
+  padding-right: 20px;
+}
+
+.image-content {
+  flex: 1 1 35%; /* Adjusts to 35% of the container width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.exercise-content {
+  background: #FFF; /* Or any color you want */
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.exercise-image {
+  flex: 1;
+}
+
+.exercise-image img {
+  width: 100%;
+  display: block; /* Remove any space below the image */
+}
+
+.exercise-text {
+  flex: 2;
+  padding: 20px;
+  background: #ffffff; /* Light grey background */
+}
+
+.exercise-text h2 {
+  margin-top: 0;
+  color: #464646; /* Dark grey color for the text */
+}
+.exercise-content h4{
+  color: #6b7280;
+}
+.exercise-content p{
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .exercise-content {
+    flex-direction: column;
+  }
+
+  .exercise-image img {
+    height: auto;
+  }
+
+  .exercise-text {
+    padding: 15px;
+  }
+}
+.contact-form-section {
+  max-width: 100%; /* Adjust the max-width if necessary */
+  margin: 40px auto; /* Keeps the form centered */
+  padding: 20px; /* Reduced padding for a smaller overall form */
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px; /* Reduced space between fields */
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px; /* Less space between label and input */
+  color: #6b7280;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 15px; /* Reduced padding in input fields for less height */
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem; /* Adjust the font size if necessary */
+  color: #464646;
+}
+
+.form-group button.submit-button {
+  width: 100%;
+  padding: 10px 0; /* Reduced padding for a shorter button */
+  font-size: 1.1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-group button.submit-button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-form-section {
+    padding: 20px;
+    width: 90%; /* Adjust width as needed on smaller screens */
+  }
+
+  .form-group button.submit-button {
+    padding: 10px 0; /* Ensure button is not too tall on small screens */
+  }
+}
+
+.footer {
+  padding: 1rem 0;
+  text-align: center;
+
+  color: var(--text-dark);
+
+  margin-top: 40px; /* Space above the footer */
+}
+
+.footer p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
